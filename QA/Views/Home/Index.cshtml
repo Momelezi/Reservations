@@ -1,0 +1,35 @@
+﻿@model QA.Models.BranchesViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>Braches List</div>
+
+<table id="customers" class="table table-bordered table-hover "> 
+    <thead>
+        <tr>
+      
+            <th>Description</th>
+            
+            <th>Active</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var br in Model.Branches)
+            {
+
+                <tr>
+                    <td>@br.Description </td>
+                    <td>@br.Active </td>
+                   
+                    
+                </tr>
+            }
+    </tbody>
+</table>
