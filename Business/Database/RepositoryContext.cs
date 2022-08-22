@@ -13,7 +13,7 @@ namespace Business.Database
 {
     public class RepositoryContext : DbContext
     {
-        private IConfiguration _configuration;
+       
        
         public RepositoryContext(DbContextOptions<RepositoryContext> options)
             : base(options)
