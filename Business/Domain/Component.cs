@@ -11,9 +11,10 @@ namespace BusinessDomain.Domain
         public int ComponentId { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
-        //public virtual ICollection<Booking> Bookings { 
-        //    get => Bookings ?? (Bookings = new List<Booking>());
-        //    set => Bookings = value;
+        public virtual ICollection<Booking> _Bookings
+        {
+            get => _Bookings ?? (_Bookings = new List<Booking>());
+            set => _Bookings = value;
         }
     }
-
+}

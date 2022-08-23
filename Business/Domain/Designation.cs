@@ -12,10 +12,10 @@ namespace BusinessDomain.Domain
         public int DesignationId { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
-        public virtual ICollection<Booking> Bookings
+        public virtual ICollection<Booking> _Bookings
         {
-            get => _bookings ?? (_bookings = new List<Booking>());
-            set => _bookings = value;
+            get => _Bookings ?? (_Bookings = new List<Booking>());
+            set => _Bookings = value;
         }
     }
 }

@@ -15,14 +15,16 @@ namespace BusinessDomain.Domain
         public string MobileNumber { get; set; }
         public string OfficeNumber { get; set; }
         public int DirectorateId { get; set; }
-        //public virtual ICollection<Booking> Bookings {
-        //    get => Bookings ?? (Bookings = new List<Booking>());
-        //    set => Bookings = value;
-        //}
+        public virtual ICollection<Booking> _Bookings
+        {
+            get => _Bookings ?? (_Bookings = new List<Booking>());
+            set => _Bookings = value;
+        }
 
-        //public virtual ICollection <Directorate> Directorates {
-        //    get => Directorates ?? (Directorates = new List<Directorate>());
-        //    set => Directorates = value;
-        //}
+        public virtual ICollection<Directorate> _Directorates
+        {
+            get => _Directorates ?? (_Directorates = new List<Directorate>());
+            set => _Directorates = value;
+        }
     }
 }

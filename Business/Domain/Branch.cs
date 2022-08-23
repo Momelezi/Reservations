@@ -9,7 +9,7 @@ namespace BusinessDomain.Domain
 {
     public class Branch
     {
-        private ICollection<Booking> _bookings;
+        private ICollection<Booking>_bookings;
         public int BranchId { get; set; }
         public string Description { get; set; }
         public bool Active { get; set; }

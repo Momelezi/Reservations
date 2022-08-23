@@ -11,9 +11,10 @@ namespace BusinessDomain.Domain
         public int InterventionTypeId { get; set; }
         public string Descr { get; set; }
         public bool Activity { get; set; }
-        //public virtual ICollection<InterventionTypeBooking> InterventionTypeBookings {
-        //    get => InterventionTypeBookings ?? (InterventionTypeBookings = new List<InterventionTypeBooking>());
-        //    set => InterventionTypeBookings = value;
-        //}
+        public virtual ICollection<InterventionTypeBooking> _InterventionTypeBookings
+        {
+            get => _InterventionTypeBookings ?? (_InterventionTypeBookings = new List<InterventionTypeBooking>());
+            set => _InterventionTypeBookings = value;
+        }
     }
 }

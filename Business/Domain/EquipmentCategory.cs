@@ -11,9 +11,10 @@ namespace BusinessDomain.Domain
         public int EquipmentCategoryId { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
-        //public virtual ICollection<Equipment> Equipments {
-        //    get => Equipments ?? (Equipments = new List<Equipment>());
-        //    set => Equipments = value;
-        //}
+        public virtual ICollection<Equipment> _Equipments
+        {
+            get => _Equipments ?? (_Equipments = new List<Equipment>());
+            set => _Equipments = value;
+        }
     }
 }

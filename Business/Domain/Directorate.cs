@@ -13,15 +13,15 @@ namespace BusinessDomain.Domain
         public bool Active { get; set; }
         public int Id { get; internal set; }
         public string Name { get; internal set; }
-        //public virtual ICollection<Booking> Bookings
-        //{
-        //    get => Bookings ?? (Bookings = new List<Booking>());
-        //    set => Bookings = value;
-        //}
-        //public virtual ICollection<Person> People
-        //{
-        //    get => People ?? (People = new List<Person>());
-        //    set => People = value;
-        //}
+        public virtual ICollection<Booking> _Bookings
+        {
+            get => _Bookings ?? (_Bookings = new List<Booking>());
+            set => _Bookings = value;
+        }
+        public virtual ICollection<Person> _People
+        {
+            get => _People ?? (_People = new List<Person>());
+            set => _People = value;
+        }
     }
 }

@@ -10,9 +10,10 @@ namespace BusinessDomain.Domain
     {
         public int VenueRoomId { get; set; }
         public bool Active { get; set; }
-        //public virtual ICollection<Venue> Venues {
-        //    get => Venues ?? (Venues = new List<Venue>());
-        //    set => Venues = value;
-        //}
+        public virtual ICollection<Venue> _Venues
+        {
+            get => _Venues ?? (_Venues = new List<Venue>());
+            set => _Venues = value;
+        }
     }
 }

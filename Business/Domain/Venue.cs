@@ -13,12 +13,13 @@ namespace BusinessDomain.Domain
         public int VenueRoomId { get; set; }
         public int Capacity { get; set; }
 
-        //public virtual VenueCategory VenueCategory { get; set; }
-        //public virtual VenueRoom VenueRoom { get; set; }
-        //public virtual ICollection<VenueBooking> VenueBookings {
-        //    get => VenueBookings ?? (VenueBookings = new List<VenueBooking>());
-        //    set => VenueBookings = value;
-        //}
+        public virtual VenueCategory VenueCategory { get; set; }
+        public virtual VenueRoom VenueRoom { get; set; }
+        public virtual ICollection<VenueBooking> _VenueBookings
+        {
+            get => _VenueBookings ?? (_VenueBookings = new List<VenueBooking>());
+            set => _VenueBookings = value;
+        }
 
     }
 }
