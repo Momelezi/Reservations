@@ -8,6 +8,7 @@ namespace BusinessDomain.Domain
 {
     public class Venue
     {
+        private ICollection<VenueBooking> _venueBookings;
         public int VenueId { get; set; }
         public int VenueCategoryId { get; set; }
         public int VenueRoomId { get; set; }
@@ -15,10 +16,10 @@ namespace BusinessDomain.Domain
 
         public virtual VenueCategory VenueCategory { get; set; }
         public virtual VenueRoom VenueRoom { get; set; }
-        public virtual ICollection<VenueBooking> _VenueBookings
+        public virtual ICollection<VenueBooking> VenueBookings
         {
-            get => _VenueBookings ?? (_VenueBookings = new List<VenueBooking>());
-            set => _VenueBookings = value;
+            get => _venueBookings ?? (_venueBookings = new List<VenueBooking>());
+            set => _venueBookings = value;
         }
 
     }

@@ -8,13 +8,14 @@ namespace BusinessDomain.Domain
 {
     public class EquipmentCategory
     {
+        private ICollection<Equipment> _equipments;
         public int EquipmentCategoryId { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
-        public virtual ICollection<Equipment> _Equipments
+        public virtual ICollection<Equipment> Equipments
         {
-            get => _Equipments ?? (_Equipments = new List<Equipment>());
-            set => _Equipments = value;
+            get => _equipments ?? (_equipments = new List<Equipment>());
+            set => _equipments = value;
         }
     }
 }

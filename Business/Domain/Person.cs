@@ -8,6 +8,7 @@ namespace BusinessDomain.Domain
 {
     public class Person
     {
+        private ICollection<Directorate> _directorates;
         public int PersonId { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }
@@ -21,10 +22,10 @@ namespace BusinessDomain.Domain
             set => _Bookings = value;
         }
 
-        public virtual ICollection<Directorate> _Directorates
+        public virtual ICollection<Directorate> Directorates
         {
-            get => _Directorates ?? (_Directorates = new List<Directorate>());
-            set => _Directorates = value;
+            get => _directorates ?? (_directorates = new List<Directorate>());
+            set => _directorates = value;
         }
     }
 }

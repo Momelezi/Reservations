@@ -8,13 +8,14 @@ namespace BusinessDomain.Domain
 {
     public class InterventionType
     {
+        private ICollection<InterventionTypeBooking> _interventionTypeBookings;
         public int InterventionTypeId { get; set; }
         public string Descr { get; set; }
         public bool Activity { get; set; }
-        public virtual ICollection<InterventionTypeBooking> _InterventionTypeBookings
+        public virtual ICollection<InterventionTypeBooking> InterventionTypeBookings
         {
-            get => _InterventionTypeBookings ?? (_InterventionTypeBookings = new List<InterventionTypeBooking>());
-            set => _InterventionTypeBookings = value;
+            get => _interventionTypeBookings ?? (_interventionTypeBookings = new List<InterventionTypeBooking>());
+            set => _interventionTypeBookings = value;
         }
     }
 }
