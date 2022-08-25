@@ -8,14 +8,14 @@ namespace BusinessDomain.Domain
 {
     public class Designation
     {
-        private readonly ICollection<Booking> _bookings;
+        private ICollection<Booking> _bookings;
         public int DesignationId { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
-        public virtual ICollection<Booking> _Bookings
+        public virtual ICollection<Booking>Bookings
         {
-            get => _Bookings ?? (_Bookings = new List<Booking>());
-            set => _Bookings = value;
+            get => _bookings ?? (_bookings = new List<Booking>());
+            set => _bookings = value;
         }
     }
 }
