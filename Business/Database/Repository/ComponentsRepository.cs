@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Business.Database.Repository
 {
     
-    public class ComponentsRepository : RepositoryBase<Component>
+    public class ComponentsRepository : RepositoryBase<Component>,IComponentsRepository
     {
         public ComponentsRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business.Database.Contracts
 {
-    internal interface IDirectorateRepository: IRepositoryBase<Directorate>
+    public interface IDirectorateRepository: IRepositoryBase<Directorate>
     {
     }
 }

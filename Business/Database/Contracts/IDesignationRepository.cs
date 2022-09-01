@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business.Database.Contracts
 {
-    internal interface IDesignationRepository: IRepositoryBase<Designation>
+    public interface IDesignationRepository: IRepositoryBase<Designation>
     {
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business.Database.Contracts
 {
-    internal interface IEquipmentBookingRepository : IRepositoryBase<EquipmentBooking>
+    public interface IEquipmentBookingRepository : IRepositoryBase<EquipmentBooking>
     {
     }
 }
