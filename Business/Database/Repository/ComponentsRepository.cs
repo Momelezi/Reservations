@@ -1,4 +1,5 @@
 ﻿using Business.Database.Contracts;
+using BusinessDomain.Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,11 +10,12 @@ using System.Threading.Tasks;
 namespace Business.Database.Repository
 {
     
-    public class ComponentsRepository : RepositoryBase<Component>,IComponentsRepository
+    public class ComponentsRepository : RepositoryBase<BusinessDomain.Domain.Component>, IComponentsRepository
     {
         public ComponentsRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {
         }
+      
 
     }
 }

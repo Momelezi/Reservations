@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace BusinessDomain.Domain
 {
-    public class Equipment
+    public class Equipment: BaseEntity
     {
         private ICollection<EquipmentBooking> _equipmentBookings;
-        public int EquipmentId { get; set; }
+        //public int EquipmentId { get; set; }
         public string Descr { get; set; }
         public int EquipmentCategoryId { get; set; }
         public virtual ICollection<EquipmentBooking> EquipmentBookings {

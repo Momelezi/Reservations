@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace BusinessDomain.Domain
 {
-    public class Person
+    public class Person: BaseEntity
     {
         private ICollection<Directorate> _directorates;
-        public int PersonId { get; set; }
+        //public int PersonId { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }
         public string EmailAddress { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business.Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace BusinessDomain.Domain
 {
-    public class Branch
+    public class Branch:BaseEntity
     {
         private ICollection<Booking>_bookings;
-        public int BranchId { get; set; }
+        //public int BranchId { get; set; }
         public string Description { get; set; }
         public bool Active { get; set; }
         public virtual ICollection<Booking> Bookings

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace BusinessDomain.Domain
 {
-    public class Booking
+    public class Booking: BaseEntity
     {
         private ICollection<EquipmentBooking>  _equipmentBookings;
         private ICollection<InterventionTypeBooking> _interventionTypeBookings;
       //  private ICollection<TargetAudienceBooking> _targetAudienceBookings;
         private ICollection<VenueBooking> _venueBookings;
-        public int BookingId { get; set; }
+        //public int BookingId { get; set; }
         public DateTime DurationStart { get; set; }
         public DateTime DurationEnd { get; set; }
         public DateTime? PreparationDate { get; set; }

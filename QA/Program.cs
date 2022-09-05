@@ -1,4 +1,6 @@
 using Business.Database;
+using Business.Database.Contracts;
+using Business.Database.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,8 @@ builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
 builder.Services.AddDbContext<RepositoryContext>(x => x.UseSqlServer(connectionString));
 
+// repositories
+//builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 
 
 var app = builder.Build();

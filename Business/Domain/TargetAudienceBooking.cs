@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Business.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BusinessDomain.Domain
 {
-    public  class TargetAudienceBooking
+    public  class TargetAudienceBooking: BaseEntity
     {
-        public int TargetAudienceBookingId { get; set; }
+        //public int TargetAudienceBookingId { get; set; }
         public int TargetAudienceId { get; set; }
         public int BookingId { get; set; }
 
