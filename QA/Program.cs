@@ -11,7 +11,22 @@ var connectionString = builder.Configuration.GetConnectionString("SqlConnection"
 builder.Services.AddDbContext<RepositoryContext>(x => x.UseSqlServer(connectionString));
 
 // repositories
-//builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+builder.Services.AddScoped<IBranchRepository, BranchRepository>();
+builder.Services.AddScoped<IComponentsRepository, ComponentsRepository>();
+builder.Services.AddScoped<IDesignationRepository, DesignationRepository>();
+builder.Services.AddScoped<IDirectorateRepository, DirectorateRepository>();
+builder.Services.AddScoped<IEquipmentBookingRepository, EquipmentBookingRepository>();
+builder.Services.AddScoped<IEquipmentCategoryRepository, EquipmentCategoryRepository>();
+builder.Services.AddScoped<IInterventionTypeBookingRepository, InterventionTypeBookingRepository>();
+builder.Services.AddScoped<IInterventionTypeRepository, InterventionTypeRepository>();
+builder.Services.AddScoped<IPersonRepository, PersonRepository>();
+builder.Services.AddScoped<ITargetAudienceBookingRepository, TargetAudienceBookingRepository>();
+builder.Services.AddScoped<ITargetAudienceRepository, TargetAudienceRepository>();
+builder.Services.AddScoped<IVenueBookingRepository, VenueBookingRepository>();
+builder.Services.AddScoped<IVenueCategoryRepository, VenueCategoryRepository>();
+builder.Services.AddScoped<IVenueRepository, VenueRepository>();
+builder.Services.AddScoped<IVenueRoomRepository, VenueRoomRepository>();
 
 
 var app = builder.Build();
