@@ -51,22 +51,22 @@ namespace Business.Database
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            
-            modelBuilder.Entity<Branch>()
-                .HasData(
-                    new Branch
-                    {
-                         BranchId = 1,
-                        Description="Computer Science",
-                         Active = true,
-                    },
-                    new Branch
-                    {
-                         BranchId=2,    
-                 Active = true,
+            //modelBuilder.Entity<Branch>()
+            //    .HasData(
+            //        new Branch
+            //        {
+            //             BranchId = 1,
+            //            Description="Computer Science",
+            //             Active = true,
+            //        },
+            //        new Branch
+            //        {
+            //             BranchId=2,    
+            //     Active = true,
                   
-                 Description= "Chemistry"
-                    }
-                );
+            //     Description= "Chemistry"
+            //        }
+            //    );
         }
     }
 }
