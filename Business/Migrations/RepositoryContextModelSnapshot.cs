@@ -34,7 +34,6 @@ namespace Business.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Comment")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ComponentId")
@@ -103,6 +102,20 @@ namespace Business.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Branches");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Active = true,
+                            Description = "Computer Science"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Active = true,
+                            Description = "Chemistry"
+                        });
                 });
 
             modelBuilder.Entity("BusinessDomain.Domain.Component", b =>

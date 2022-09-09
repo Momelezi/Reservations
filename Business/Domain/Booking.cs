@@ -24,7 +24,7 @@ namespace BusinessDomain.Domain
         public int? BranchId { get; set; }
         public int? DirectorateId { get; set; }
         public int? ComponentId { get; set; }
-        public string Comment { get; set; }
+        public string? Comment { get; set; }
         public int? DesignationId { get; set; }
 
         public  Branch Branch { get; set; }

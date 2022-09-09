@@ -31,4 +31,8 @@
     <ProjectReference Include="..\Business\Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\ViewModel\" />
+  </ItemGroup>
+
 </Project>

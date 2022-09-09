@@ -4,23 +4,13 @@
 
 namespace Business.Migrations
 {
-    public partial class BaseEntity : Migration
+    public partial class populatedBranchData : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_DirectoratePerson_Persons_PeoplePersonId",
                 table: "DirectoratePerson");
-
-            migrationBuilder.DeleteData(
-                table: "Branches",
-                keyColumn: "BranchId",
-                keyValue: 1);
-
-            migrationBuilder.DeleteData(
-                table: "Branches",
-                keyColumn: "BranchId",
-                keyValue: 2);
 
             migrationBuilder.DropColumn(
                 name: "DirectorateId",
@@ -115,6 +105,14 @@ namespace Business.Migrations
                 name: "BookingId",
                 table: "Bookings",
                 newName: "Id");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Comment",
+                table: "Bookings",
+                type: "nvarchar(max)",
+                nullable: true,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_DirectoratePerson_Persons_PeopleId",
@@ -228,15 +226,15 @@ namespace Business.Migrations
                 nullable: false,
                 defaultValue: 0);
 
-            migrationBuilder.InsertData(
-                table: "Branches",
-                columns: new[] { "BranchId", "Active", "Description" },
-                values: new object[] { 1, true, "Computer Science" });
-
-            migrationBuilder.InsertData(
-                table: "Branches",
-                columns: new[] { "BranchId", "Active", "Description" },
-                values: new object[] { 2, true, "Chemistry" });
+            migrationBuilder.AlterColumn<string>(
+                name: "Comment",
+                table: "Bookings",
+                type: "nvarchar(max)",
+                nullable: false,
+                defaultValue: "",
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)",
+                oldNullable: true);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_DirectoratePerson_Persons_PeoplePersonId",

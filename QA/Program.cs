@@ -8,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
-builder.Services.AddDbContext<RepositoryContext>(x => x.UseSqlServer(connectionString));
+builder.Services.AddDbContext<RepositoryContext>(x => x.UseSqlServer(connectionString), ServiceLifetime.Transient);
+
 
 // repositories
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();

@@ -12,6 +12,8 @@ namespace BusinessDomain.Domain
     {
         private ICollection<Booking>_bookings;
         //public int BranchId { get; set; }
+        [Required]
+        [MinLength(6)]
         public string Description { get; set; }
         public bool Active { get; set; }
         public virtual ICollection<Booking> Bookings
