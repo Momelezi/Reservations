@@ -8,6 +8,10 @@ namespace QA.Models.ViewModels
         public BookingViewModel()
         {
             EquipmentBookings = EquipmentBookings?? new List <EquipmentBookingViewModel>();
+            InterventionTypeBookings = InterventionTypeBookings ?? new List<InterventionTypeBookingViewModel>();
+            TargetAudienceBookings = TargetAudienceBookings ?? new List<TargetAudienceBookingViewModel>();
+            VenueBookings = VenueBookings ?? new List<VenueBookingViewModel>();
+
         }
         private ICollection<EquipmentBooking> _equipmentBookings;
         private ICollection<InterventionTypeBooking> _interventionTypeBookings;
@@ -29,20 +33,9 @@ namespace QA.Models.ViewModels
 
         public Branch Branch { get; set; }
         public  List <EquipmentBookingViewModel> EquipmentBookings {get; set;}
-        public virtual ICollection<InterventionTypeBooking> InterventionTypeBookings
-        {
-            get => _interventionTypeBookings ?? (_interventionTypeBookings = new List<InterventionTypeBooking>());
-            set => _interventionTypeBookings = value;
-        }
-        public virtual ICollection<TargetAudienceBooking> TargetAudienceBookings {
-           get => _targetAudienceBookings ?? (_targetAudienceBookings = new List<TargetAudienceBooking>());
-           set => _targetAudienceBookings = value;
-        }
-        public virtual ICollection<VenueBooking> VenueBookings
-        {
-            get => _venueBookings ?? (_venueBookings = new List<VenueBooking>());
-            set => _venueBookings = value;
-        }
+        public List <InterventionTypeBookingViewModel> InterventionTypeBookings {get ;set ;}
+        public virtual ICollection<TargetAudienceBookingViewModel> TargetAudienceBookings {get; set;}
+        public virtual ICollection<VenueBookingViewModel> VenueBookings {get ;set;}
 
     }
 }

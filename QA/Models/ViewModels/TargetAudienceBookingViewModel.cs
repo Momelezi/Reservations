@@ -1,8 +1,10 @@
-﻿namespace QA.Models.ViewModels
+﻿using BusinessDomain.Domain;
+
+namespace QA.Models.ViewModels
 {
     public class TargetAudienceBookingViewModel
     {
-        //public int TargetAudienceBookingId { get; set; }
+        public int Id { get; set; }
         public int TargetAudienceId { get; set; }
         public int BookingId { get; set; }
 

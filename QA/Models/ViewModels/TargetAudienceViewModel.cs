@@ -1,15 +1,17 @@
-﻿namespace QA.Models.ViewModels
+﻿using BusinessDomain.Domain;
+
+namespace QA.Models.ViewModels
 {
     public class TargetAudienceViewModel
     {
+        public TargetAudienceViewModel()
+        {
+            TargetAudienceBookings = TargetAudienceBookings ?? new List<TargetAudienceBookingViewModel>();
+        }
         private ICollection<TargetAudienceBooking> _targetAudienceBookings;
-        //public int TargetAudienceId { get; set; }
+        public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
-        public virtual ICollection<TargetAudienceBooking> TargetAudienceBookings
-        {
-            get => _targetAudienceBookings ?? (_targetAudienceBookings = new List<TargetAudienceBooking>());
-            set => _targetAudienceBookings = value;
-        }
+        public virtual ICollection<TargetAudienceBookingViewModel> TargetAudienceBookings {get ;set ;}
     }
 }

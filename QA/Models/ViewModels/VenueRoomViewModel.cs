@@ -1,14 +1,16 @@
-﻿namespace QA.Models.ViewModels
+﻿using BusinessDomain.Domain;
+
+namespace QA.Models.ViewModels
 {
     public class VenueRoomViewModel
     {
-        private ICollection<Venue> _venues;
-        //public int VenueRoomId { get; set; }
-        public bool Active { get; set; }
-        public virtual ICollection<Venue> _Venues
+        public VenueRoomViewModel()
         {
-            get => _venues ?? (_Venues = new List<Venue>());
-            set => _venues = value;
+            Venues = Venues ?? new List<VenueViewModel>();
         }
+        private ICollection<Venue> _venues;
+        public int Id { get; set; }
+        public bool Active { get; set; }
+        public virtual ICollection<VenueViewModel> Venues{ get; set; }
     }
 }
