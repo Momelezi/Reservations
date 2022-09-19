@@ -8,7 +8,6 @@ namespace QA.Models.ViewModels
         {
             TargetAudienceBookings = TargetAudienceBookings ?? new List<TargetAudienceBookingViewModel>();
         }
-        private ICollection<TargetAudienceBooking> _targetAudienceBookings;
         public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }

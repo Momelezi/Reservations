@@ -8,7 +8,7 @@ namespace QA.Models.ViewModels
         public int TargetAudienceId { get; set; }
         public int BookingId { get; set; }
 
-        public virtual Booking Booking { get; set; }
-        public virtual TargetAudience TargetAudience { get; set; }
+        public virtual BookingViewModel Booking { get; set; }
+        public virtual TargetAudienceViewModel TargetAudience { get; set; }
     }
 }

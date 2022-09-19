@@ -13,10 +13,7 @@ namespace QA.Models.ViewModels
             VenueBookings = VenueBookings ?? new List<VenueBookingViewModel>();
 
         }
-        private ICollection<EquipmentBooking> _equipmentBookings;
-        private ICollection<InterventionTypeBooking> _interventionTypeBookings;
-        private ICollection<TargetAudienceBooking> _targetAudienceBookings;
-        private ICollection<VenueBooking> _venueBookings;
+        
         public int Id { get; set; }
         public DateTime DurationStart { get; set; }
         public DateTime DurationEnd { get; set; }
@@ -31,7 +28,7 @@ namespace QA.Models.ViewModels
         public string? Comment { get; set; }
         public int? DesignationId { get; set; }
 
-        public Branch Branch { get; set; }
+        public BranchViewModel Branch { get; set; }
         public  List <EquipmentBookingViewModel> EquipmentBookings {get; set;}
         public List <InterventionTypeBookingViewModel> InterventionTypeBookings {get ;set ;}
         public virtual ICollection<TargetAudienceBookingViewModel> TargetAudienceBookings {get; set;}

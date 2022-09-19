@@ -8,7 +8,7 @@ namespace QA.Models.ViewModels
         public int VenueId { get; set; }
         public int BookingId { get; set; }
 
-        public virtual Booking Booking { get; set; }
-        public virtual Venue Venue { get; set; }
+        public virtual BookingViewModel Booking { get; set; }
+        public virtual VenueViewModel Venue { get; set; }
     }
 }

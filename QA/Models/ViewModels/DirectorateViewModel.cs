@@ -10,8 +10,6 @@ namespace QA.Models.ViewModels
             People = People ?? new List<PersonViewModel>();
 
         }
-        private ICollection<Booking> _bookings;
-        private ICollection<Person> _People;
         public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }

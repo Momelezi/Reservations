@@ -8,7 +8,7 @@ namespace QA.Models.ViewModels
         public int InterventionTypeId { get; set; }
         public int BookingId { get; set; }
 
-        public virtual Booking Booking { get; set; }
-        public virtual InterventionType InterventionType { get; set; }
+        public virtual BookingViewModel Booking { get; set; }
+        public virtual InterventionTypeViewModel InterventionType { get; set; }
     }
 }

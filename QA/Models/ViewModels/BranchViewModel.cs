@@ -8,7 +8,6 @@ namespace QA.Models.ViewModels
         {
             Bookings = Bookings ?? new List<BookingViewModel>();
         }
-        private ICollection<Booking> _bookings;
         public int Id { get; set; }
         public string Description { get; set; }
         public bool Active { get; set; }

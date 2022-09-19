@@ -8,7 +8,6 @@ namespace QA.Models.ViewModels
         {
             InterventionTypeBookings = InterventionTypeBookings ?? new List<InterventionTypeBookingViewModel>();
         }
-        private ICollection<InterventionTypeBooking> _interventionTypeBookings;
         public int Id { get; set; }
         public string Descr { get; set; }
         public bool Activity { get; set; }

@@ -9,7 +9,6 @@ namespace QA.Models.ViewModels
             Bookings = Bookings ?? new List<BookingViewModel>();
             Directorates = Directorates ?? new List<DirectorateViewModel>();
         }
-        private ICollection<Directorate> _directorates;
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }

@@ -8,7 +8,6 @@ namespace QA.Models.ViewModels
         {
             Venues = Venues ?? new List<VenueViewModel>();
         }
-        private ICollection<Venue> _venues;
         public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
