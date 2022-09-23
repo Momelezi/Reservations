@@ -56,7 +56,7 @@ namespace Business.Database
                     new Branch
                     {
                         Id = 1,
-                        Description = "Computer Science",
+                        Description = "Education & Planning",
                         Active = true,
                     },
                     new Branch
@@ -64,9 +64,85 @@ namespace Business.Database
                         Id = 2,
                         Active = true,
 
-                        Description = "Chemistry"
+                        Description = "Curriculum & Assessment Management"
+                    },
+                    new Branch
+                    {
+                        Id = 3,
+                        Active = true,
+
+                        Description = "Institutional Development"
+                    },
+                    new Branch
+                    {
+                        Id = 4,
+                        Active = true,
+
+                        Description = "Corporate Services"
                     }
                 );
+            modelBuilder.Entity<VenueCategory>()
+                .HasData(
+                new VenueCategory
+                {
+                    Id = 1,
+                    Descr = "Auditorium",
+                    Active = true,
+                },
+                new VenueCategory
+                {
+                    Id = 2,
+                    Descr = "Lecture Room",
+                    Active = true,
+                },
+                new VenueCategory
+                {
+                    Id = 3,
+                    Descr = "Computer Lab",
+                    Active = true,
+                },
+                new VenueCategory
+                {
+                    Id = 4,
+                    Descr = "Boardroom",
+                    Active = true,
+                },
+                new VenueCategory
+                {
+                    Id = 5,
+                    Descr = "Meeting Room",
+                    Active = true,
+                },
+                new VenueCategory
+                {
+                    Id = 6,
+                    Descr = "Theater",
+                    Active = true,
+                }
+
+                );
+            modelBuilder.Entity<TargetAudience>()
+                .HasData(
+                new TargetAudience
+                {
+                    Id = 1,
+                    Descr = "Foundation Phase Teachers",
+                    Active = true,
+                },
+                new TargetAudience
+                {
+                    Id = 2,
+                    Descr = "Circuit Principals",
+                    Active = true,
+                },
+                new TargetAudience
+                {
+                    Id = 3,
+                    Descr = "Subject Advisor",
+                    Active = true,
+                }
+                );
+
         }
     }
 }
