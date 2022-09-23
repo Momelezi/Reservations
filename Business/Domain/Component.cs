@@ -10,7 +10,7 @@ namespace BusinessDomain.Domain
     public class Component: BaseEntity
     {
         private ICollection<Booking> _bookings;
-        //public int ComponentId { get; set; }
+        public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
         public virtual ICollection<Booking>Bookings

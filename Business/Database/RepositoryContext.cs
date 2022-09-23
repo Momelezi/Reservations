@@ -142,6 +142,130 @@ namespace Business.Database
                     Active = true,
                 }
                 );
+            modelBuilder.Entity<Component>()
+               .HasData(
+               new Component
+               {
+                   Id = 1,
+                   Descr = "Program Delivery",
+                   Active = true,
+               },
+               new Component
+               {
+                   Id = 2,
+                   Descr = "TQI",
+                   Active = true,
+               },
+               new Component
+               {
+                   Id = 3,
+                   Descr = "ICT Integration",
+                   Active = true,
+               }
+               );
+            modelBuilder.Entity<Designation>()
+               .HasData(
+               new Designation
+               {
+                   Id = 1,
+                   Descr = "SES",
+                   Active = true,
+               },
+               new Designation
+               {
+                   Id = 2,
+                   Descr = "CES",
+                   Active = true,
+               },
+               new Designation
+               {
+                   Id = 3,
+                   Descr = "DCES",
+                   Active = true,
+               }
+               );
+            modelBuilder.Entity<Directorate>()
+               .HasData(
+               new Directorate
+               {
+                   Id = 1,
+                   Descr = "Ass Mngmt",
+                   Active = true,
+               },
+               new Directorate
+               {
+                   Id = 2,
+                   Descr = "GET",
+                   Active = true,
+               },
+               new Directorate
+               {
+                   Id = 3,
+                   Descr = "FET",
+                   Active = true,
+               }
+
+               );
+            modelBuilder.Entity<Directorate>()
+               .HasData(
+               new Directorate
+               {
+                   Id = 1,
+                   Descr = "Laptop Computer",
+                   Active = true,
+               },
+               new Directorate
+               {
+                   Id = 2,
+                   Descr = "Data Projector",
+                   Active = true,
+               },
+               new Directorate
+               {
+                   Id = 3,
+                   Descr = "Whiteboard",
+                   Active = true,
+               }
+               );
+            modelBuilder.Entity<InterventionType>()
+               .HasData(
+               new InterventionType
+               {
+                   Id = 1,
+                   Descr = "Laptop Computer",
+                   Active = true,
+               },
+               new InterventionType
+               {
+                   Id = 1,
+                   Descr = "Training",
+                   Active = true,
+               },
+               new InterventionType
+               {
+                   Id = 2,
+                   Descr = "Workshop",
+                   Active = true,
+               },
+               new InterventionType
+               {
+                   Id = 3,
+                   Descr = "Conference",
+                   Active = true,
+               },
+               new InterventionType
+               {
+                   Id = 4,
+                   Descr = "Seminar",
+                   Active = true,
+               },
+               new InterventionType
+               {
+                   Id = 5,
+                   Descr = "Meeting",
+                   Active = true,
+               }
+               );
 
         }
     }

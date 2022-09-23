@@ -10,9 +10,9 @@ namespace BusinessDomain.Domain
     public class InterventionType: BaseEntity
     {
         private ICollection<InterventionTypeBooking> _interventionTypeBookings;
-        //public int InterventionTypeId { get; set; }
+        public int Id { get; set; }
         public string Descr { get; set; }
-        public bool Activity { get; set; }
+        public bool Active { get; set; }
         public virtual ICollection<InterventionTypeBooking> InterventionTypeBookings
         {
             get => _interventionTypeBookings ?? (_interventionTypeBookings = new List<InterventionTypeBooking>());

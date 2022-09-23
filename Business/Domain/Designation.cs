@@ -10,7 +10,7 @@ namespace BusinessDomain.Domain
     public class Designation: BaseEntity
     {
         private ICollection<Booking> _bookings;
-        //public int DesignationId { get; set; }
+        public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
         public virtual ICollection<Booking>Bookings

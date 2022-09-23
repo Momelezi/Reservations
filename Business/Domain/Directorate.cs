@@ -11,11 +11,9 @@ namespace BusinessDomain.Domain
     {
         private ICollection<Booking> _bookings;
         private ICollection<Person> _People;
-        //public int DirectorateId { get; set; }
+        public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
-        public int Id { get; internal set; }
-        public string Name { get; internal set; }
         public virtual ICollection<Booking> Bookings
         {
             get => _bookings ?? (_bookings = new List<Booking>());
