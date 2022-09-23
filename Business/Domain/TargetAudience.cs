@@ -10,7 +10,7 @@ namespace BusinessDomain.Domain
     public class TargetAudience: BaseEntity
     {
         private ICollection<TargetAudienceBooking> _targetAudienceBookings;
-        //public int TargetAudienceId { get; set; }
+        public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
         public virtual ICollection<TargetAudienceBooking> TargetAudienceBookings
