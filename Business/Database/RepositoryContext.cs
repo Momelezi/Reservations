@@ -206,21 +206,21 @@ namespace Business.Database
                }
 
                );
-            modelBuilder.Entity<Directorate>()
+            modelBuilder.Entity<EquipmentCategory>()
                .HasData(
-               new Directorate
+               new EquipmentCategory
                {
                    Id = 1,
                    Descr = "Laptop Computer",
                    Active = true,
                },
-               new Directorate
+               new EquipmentCategory
                {
                    Id = 2,
                    Descr = "Data Projector",
                    Active = true,
                },
-               new Directorate
+               new EquipmentCategory
                {
                    Id = 3,
                    Descr = "Whiteboard",
@@ -229,12 +229,6 @@ namespace Business.Database
                );
             modelBuilder.Entity<InterventionType>()
                .HasData(
-               new InterventionType
-               {
-                   Id = 1,
-                   Descr = "Laptop Computer",
-                   Active = true,
-               },
                new InterventionType
                {
                    Id = 1,
