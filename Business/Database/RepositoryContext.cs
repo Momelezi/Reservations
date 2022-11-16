@@ -1,4 +1,5 @@
 ﻿
+using Business.Domain;
 using BusinessDomain.Domain;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,7 @@ namespace Business.Database
             : base(options)
         {
         }
-
+        public DbSet<Venue> AuditoriumRooms { get; set; }
         public DbSet<Venue> Venues { get; set; }
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Branch> Branches { get; set; }
@@ -258,6 +259,32 @@ namespace Business.Database
                    Id = 5,
                    Descr = "Meeting",
                    Active = true,
+               }
+               );
+            modelBuilder.Entity<AuditoriumRoom>()
+               .HasData(
+               new AuditoriumRoom
+               {
+                   Id = 1,
+                   Name = "Auditorium 1",
+                   VenueCategoryId=1
+
+               },
+               new AuditoriumRoom
+               {
+                   Id = 2,
+                   Name = "Auditorium 2",
+                   VenueCategoryId = 1
+
+
+               },
+               new AuditoriumRoom
+               {
+                   Id = 3,
+                   Name = "Auditorium 3",
+                   VenueCategoryId = 1
+
+
                }
                );
 

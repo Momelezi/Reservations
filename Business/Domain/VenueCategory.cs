@@ -10,7 +10,6 @@ namespace BusinessDomain.Domain
     public class VenueCategory: BaseEntity
     {
         private ICollection<Venue> _venues;
-        public int Id { get; set; }
         public string Descr { get; set; }
         public bool Active { get; set; }
         public virtual ICollection<Venue> Venues
